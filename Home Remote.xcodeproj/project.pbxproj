@@ -417,6 +417,7 @@
 				A23575DA1B158DE800EC8208 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A23575DB1B158DE800EC8208 /* Build configuration list for PBXNativeTarget "Home RemoteTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +426,7 @@
 				A23575DD1B158DE800EC8208 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

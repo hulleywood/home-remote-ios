@@ -72,7 +72,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.12156862745098039" green="0.11372549019607843" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.19607843137254902" green="0.24313725490196078" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Apm-m2-LEn" secondAttribute="centerX" id="1GL-5Y-wG3"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Apm-m2-LEn" secondAttribute="bottom" constant="64" id="4sk-fq-yYM"/>
@@ -88,7 +88,7 @@
                             <constraint firstItem="zB9-ka-dhi" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="64" id="oCI-3n-ATl"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Living Room" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Living Room" image="video-projector-32" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,7 +128,7 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Bedroom" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Bedroom" image="lamp-32" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,12 +155,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="lamp-32" width="32" height="32"/>
         <image name="mute-76" width="76" height="76"/>
         <image name="power-76" width="76" height="76"/>
-        <image name="second" width="30" height="30"/>
         <image name="source1-76" width="76" height="76"/>
         <image name="source2-76" width="76" height="76"/>
+        <image name="video-projector-32" width="32" height="32"/>
         <image name="volume-down-76" width="76" height="76"/>
         <image name="volume-up-76" width="76" height="76"/>
     </resources>
