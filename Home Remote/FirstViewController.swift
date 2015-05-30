@@ -10,7 +10,7 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    @IBOutlet weak var offlineText: UILabel!
+    @IBOutlet weak var offlineOverlay: UIView!
     
     struct Config {
         let baseUrl: String
@@ -18,19 +18,19 @@ class FirstViewController: UIViewController {
         var room: String
     }
 
-    //var config = Config(baseUrl: "http://10.0.1.54:3000", roomOnline: false)
+    //var config = Config(baseUrl: "http://10.0.1.54:3000", roomOnline: false, room: "living_room")
     var config = Config(baseUrl: "http://127.0.0.1:3000", roomOnline: false, room: "living_room")
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setRoomStatus()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        getRoomStatus()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func setRoomStatus() {
+    func getRoomStatus() {
         var url = NSURL(string: "\(config.baseUrl)/\(config.room)/monitor")
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithURL(url!, completionHandler: { (data: NSData!, response:NSURLResponse!,
@@ -56,13 +56,12 @@ class FirstViewController: UIViewController {
         config.roomOnline = status
         if status {
             println("\(config.room) is online")
-            view.backgroundColor = UIColorFromRGB("#323E4C")
-            //view.tintColor = UIColorFromRGB("#007AFF")
-            offlineText.hidden = true
+            offlineOverlay.hidden = true
+            view.setNeedsDisplay()
         } else {
             println("\(config.room) is offline")
-            view.backgroundColor = .grayColor()
-            offlineText.hidden = false
+            offlineOverlay.hidden = false
+            view.setNeedsDisplay()
         }
     }
     
@@ -77,6 +76,10 @@ class FirstViewController: UIViewController {
         let b = CGFloat(Float(Int(color) & mask)/255.0)
         
         return UIColor(red: r, green: g, blue: b, alpha: CGFloat(alpha))
+    }
+    
+    @IBAction func refreshStatusPressed(sender: AnyObject) {
+        getRoomStatus()
     }
 
     @IBAction func powerPressed(sender: AnyObject) {

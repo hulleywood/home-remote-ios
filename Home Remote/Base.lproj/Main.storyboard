@@ -71,16 +71,39 @@
                                     <action selector="mutePressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Ypo-r5-3Xz"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Living room is offline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HY-7e-Gyx">
-                                <rect key="frame" x="221" y="507" width="158" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="idW-ba-IFY">
+                                <rect key="frame" x="0.0" y="0.0" width="601" height="551"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Living room is offline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HY-7e-Gyx">
+                                        <rect key="frame" x="221" y="510" width="158" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAc-29-IvO">
+                                        <rect key="frame" x="399" y="509" width="24" height="24"/>
+                                        <state key="normal" image="refresh-2-24">
+                                            <color key="titleColor" red="0.8784313725490196" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="refreshStatusPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ZXQ-Cf-6Cg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="7HY-7e-Gyx" secondAttribute="centerX" id="1Np-yb-Jri"/>
+                                    <constraint firstAttribute="bottom" secondItem="NAc-29-IvO" secondAttribute="bottom" constant="18" id="Yr6-FV-mO5"/>
+                                    <constraint firstAttribute="bottom" secondItem="7HY-7e-Gyx" secondAttribute="bottom" constant="20" id="cmz-AY-T11"/>
+                                    <constraint firstItem="NAc-29-IvO" firstAttribute="leading" secondItem="7HY-7e-Gyx" secondAttribute="trailing" constant="20" id="m2t-st-YxR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.19607843137254902" green="0.24313725490196078" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Apm-m2-LEn" secondAttribute="centerX" id="1GL-5Y-wG3"/>
+                            <constraint firstItem="idW-ba-IFY" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="1Yr-Qr-pL2"/>
                             <constraint firstAttribute="centerX" secondItem="zB9-ka-dhi" secondAttribute="centerX" id="4w5-VY-3Nt"/>
                             <constraint firstAttribute="centerY" secondItem="0HJ-Ag-NIt" secondAttribute="centerY" constant="-50" id="5Xc-BG-UQ9"/>
                             <constraint firstAttribute="centerX" secondItem="6Xq-Q5-4Pb" secondAttribute="centerX" constant="-75" id="8Ul-Xe-RwZ"/>
@@ -90,13 +113,16 @@
                             <constraint firstAttribute="centerY" secondItem="Bje-wp-lul" secondAttribute="centerY" constant="100" id="Mod-Mv-KoV"/>
                             <constraint firstAttribute="centerX" secondItem="0HJ-Ag-NIt" secondAttribute="centerX" constant="75" id="Ofd-Vk-ssc"/>
                             <constraint firstAttribute="centerY" secondItem="6Xq-Q5-4Pb" secondAttribute="centerY" constant="-50" id="U7Q-ds-zdg"/>
+                            <constraint firstAttribute="bottom" secondItem="idW-ba-IFY" secondAttribute="bottom" constant="49" id="WLa-nm-kPS"/>
                             <constraint firstAttribute="centerX" secondItem="IsZ-Yp-ibI" secondAttribute="centerX" constant="75" id="dhW-0t-FMI"/>
+                            <constraint firstItem="idW-ba-IFY" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="hYH-rO-3Hk"/>
+                            <constraint firstAttribute="trailing" secondItem="idW-ba-IFY" secondAttribute="trailing" constant="-1" id="ibz-9F-cFX"/>
                             <constraint firstItem="zB9-ka-dhi" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="64" id="oCI-3n-ATl"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Living Room" image="video-projector-32" id="acW-dT-cKf"/>
                     <connections>
-                        <outlet property="offlineText" destination="7HY-7e-Gyx" id="voU-vT-Frz"/>
+                        <outlet property="offlineOverlay" destination="idW-ba-IFY" id="HB1-XH-9wt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -167,6 +193,7 @@
         <image name="lamp-32" width="32" height="32"/>
         <image name="mute-76" width="76" height="76"/>
         <image name="power-76" width="76" height="76"/>
+        <image name="refresh-2-24" width="24" height="24"/>
         <image name="source1-76" width="76" height="76"/>
         <image name="source2-76" width="76" height="76"/>
         <image name="video-projector-32" width="32" height="32"/>
