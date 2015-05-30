@@ -71,7 +71,7 @@
                                     <action selector="mutePressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Ypo-r5-3Xz"/>
                                 </connections>
                             </button>
-                            <view opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="idW-ba-IFY">
+                            <view hidden="YES" opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="idW-ba-IFY">
                                 <rect key="frame" x="0.0" y="0.0" width="601" height="551"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Living room is offline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HY-7e-Gyx">

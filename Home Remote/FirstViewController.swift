@@ -55,13 +55,11 @@ class FirstViewController: UIViewController {
     func setRoomStatus(status: Bool) {
         config.roomOnline = status
         if status {
+            self.offlineOverlay.hidden = true
             println("\(config.room) is online")
-            offlineOverlay.hidden = true
-            view.setNeedsDisplay()
         } else {
+            self.offlineOverlay.hidden = false
             println("\(config.room) is offline")
-            offlineOverlay.hidden = false
-            view.setNeedsDisplay()
         }
     }
     
@@ -80,6 +78,7 @@ class FirstViewController: UIViewController {
     
     @IBAction func refreshStatusPressed(sender: AnyObject) {
         getRoomStatus()
+        //self.offlineOverlay.hidden = true
     }
 
     @IBAction func powerPressed(sender: AnyObject) {
