@@ -10,78 +10,73 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
+    @IBOutlet weak var offlineText: UILabel!
+    
     struct Config {
         let baseUrl: String
-        var livingRoomOnline: Bool
-        var bedRoomOnline: Bool
+        var roomOnline: Bool
+        var room: String
     }
 
-    //var config = Config(baseUrl: "http://10.0.1.54:3000", livingRoomOnline: false, bedRoomOnline: false)
-    var config = Config(baseUrl: "http://127.0.0.1:3000", livingRoomOnline: false, bedRoomOnline: false)
+    //var config = Config(baseUrl: "http://10.0.1.54:3000", roomOnline: false)
+    var config = Config(baseUrl: "http://127.0.0.1:3000", roomOnline: false, room: "living_room")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        // check status here
-        setBedRoomStatus()
-        setLivingRoomStatus()
+        setRoomStatus()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.s
     }
     
-    func setLivingRoomStatus() {
-        var url = NSURL(string: "\(config.baseUrl)/living_room/monitor")
+    func setRoomStatus() {
+        var url = NSURL(string: "\(config.baseUrl)/\(config.room)/monitor")
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithURL(url!, completionHandler: { (data: NSData!, response:NSURLResponse!,
             error: NSError!) -> Void in
-            let httpResponse = response as! NSHTTPURLResponse
             if error != nil {
-                println("An error occured while loading the living room")
+                self.setRoomStatus(false)
+                println("An error occured while loading the \(self.config.room)")
                 println(error)
-                self.setRoomOffline("living_room")
-            } else if httpResponse.statusCode == 200 {
-                println("Living Room is online")
-                self.setRoomOnline("living_room")
             } else {
-                println("Something isn't right in the living room")
-                println(response)
-                println(data)
-                self.setRoomOffline("living_room")
+                let httpResponse = response as! NSHTTPURLResponse
+                if httpResponse.statusCode == 200 {
+                    self.setRoomStatus(true)
+                } else {
+                    self.setRoomStatus(false)
+                    println(response)
+                }
             }
         })
         dataTask.resume()
     }
     
-    func setBedRoomStatus() {
-        var url = NSURL(string: "\(config.baseUrl)/bed_room/monitor")
-        let session = NSURLSession.sharedSession()
-        let dataTask = session.dataTaskWithURL(url!, completionHandler: { (data: NSData!, response:NSURLResponse!,
-            error: NSError!) -> Void in
-            let httpResponse = response as! NSHTTPURLResponse
-            if error != nil {
-                println("An error occured while loading the bed room")
-                println(error)
-                self.setRoomOffline("bedroom")
-            } else if httpResponse.statusCode == 200 {
-                println("Bedroom is online")
-                self.setRoomOnline("bedroom")
-            } else {
-                println("Something isn't right in the bed room")
-                println(response)
-                println(data)
-                self.setRoomOffline("bedroom")
-            }
-        })
-        dataTask.resume()
+    func setRoomStatus(status: Bool) {
+        config.roomOnline = status
+        if status {
+            println("\(config.room) is online")
+            view.backgroundColor = UIColorFromRGB("#323E4C")
+            //view.tintColor = UIColorFromRGB("#007AFF")
+            offlineText.hidden = true
+        } else {
+            println("\(config.room) is offline")
+            view.backgroundColor = .grayColor()
+            offlineText.hidden = false
+        }
     }
     
-    func setRoomOnline(room: String) {
-    }
-    
-    func setRoomOffline(room: String) {
+    func UIColorFromRGB(colorCode: String, alpha: Float = 1.0) -> UIColor {
+        var scanner = NSScanner(string:colorCode)
+        var color:UInt32 = 0;
+        scanner.scanHexInt(&color)
+        
+        let mask = 0x000000FF
+        let r = CGFloat(Float(Int(color >> 16) & mask)/255.0)
+        let g = CGFloat(Float(Int(color >> 8) & mask)/255.0)
+        let b = CGFloat(Float(Int(color) & mask)/255.0)
+        
+        return UIColor(red: r, green: g, blue: b, alpha: CGFloat(alpha))
     }
 
     @IBAction func powerPressed(sender: AnyObject) {
@@ -119,10 +114,14 @@ class FirstViewController: UIViewController {
                 println(error)
             } else {
                 println(response)
-                println(data)
             }
         })
-        dataTask.resume()
+        
+        if config.roomOnline {
+            dataTask.resume()
+        } else {
+            println("Cannot send \(code) to \(remote) because \(config.room) is offline")
+        }
     }
 
 }
