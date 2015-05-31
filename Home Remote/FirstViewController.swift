@@ -18,8 +18,8 @@ class FirstViewController: UIViewController {
         var room: String
     }
 
-    var config = Config(baseUrl: "http://10.0.1.54:3000", roomOnline: false, room: "living_room")
-    //var config = Config(baseUrl: "http://127.0.0.1:3000", roomOnline: false, room: "living_room")
+    var config = Config(baseUrl: "http://10.0.1.54:2488", roomOnline: false, room: "living_room")
+    //var config = Config(baseUrl: "http://127.0.0.1:2488", roomOnline: false, room: "living_room")
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
