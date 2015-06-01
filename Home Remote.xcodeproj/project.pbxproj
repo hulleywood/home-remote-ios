@@ -14,6 +14,11 @@
 		A23575C61B158DE800EC8208 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23575C51B158DE800EC8208 /* Images.xcassets */; };
 		A23575C91B158DE800EC8208 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A23575C71B158DE800EC8208 /* LaunchScreen.xib */; };
 		A23575D51B158DE800EC8208 /* Home_RemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23575D41B158DE800EC8208 /* Home_RemoteTests.swift */; };
+		A2498C8D1B1C0363001D59EA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2498C8C1B1C0363001D59EA /* NotificationCenter.framework */; };
+		A2498C921B1C0363001D59EA /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2498C911B1C0363001D59EA /* TodayViewController.swift */; };
+		A2498C941B1C0363001D59EA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2498C931B1C0363001D59EA /* MainInterface.storyboard */; };
+		A2498CA21B1C04C0001D59EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23575C51B158DE800EC8208 /* Images.xcassets */; };
+		A2498CA51B1C1864001D59EA /* Home Remote Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A2498C8A1B1C0363001D59EA /* Home Remote Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +29,28 @@
 			remoteGlobalIDString = A23575B61B158DE800EC8208;
 			remoteInfo = "Home Remote";
 		};
+		A2498CA61B1C1864001D59EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A23575AF1B158DE800EC8208 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2498C891B1C0363001D59EA;
+			remoteInfo = "Home Remote Widget";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2498CA81B1C1864001D59EA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A2498CA51B1C1864001D59EA /* Home Remote Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A23575B71B158DE800EC8208 /* Home Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Home Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +64,13 @@
 		A23575CE1B158DE800EC8208 /* Home RemoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Home RemoteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A23575D31B158DE800EC8208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A23575D41B158DE800EC8208 /* Home_RemoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_RemoteTests.swift; sourceTree = "<group>"; };
+		A2498C8A1B1C0363001D59EA /* Home Remote Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Home Remote Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2498C8C1B1C0363001D59EA /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		A2498C901B1C0363001D59EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2498C911B1C0363001D59EA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		A2498C931B1C0363001D59EA /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		A2498CA31B1C1452001D59EA /* Home Remote Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Home Remote Widget.entitlements"; sourceTree = "<group>"; };
+		A2498CA41B1C145E001D59EA /* Home Remote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Home Remote.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +88,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A2498C871B1C0363001D59EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2498C8D1B1C0363001D59EA /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -63,6 +104,8 @@
 			children = (
 				A23575B91B158DE800EC8208 /* Home Remote */,
 				A23575D11B158DE800EC8208 /* Home RemoteTests */,
+				A2498C8E1B1C0363001D59EA /* Home Remote Widget */,
+				A2498C8B1B1C0363001D59EA /* Frameworks */,
 				A23575B81B158DE800EC8208 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +115,7 @@
 			children = (
 				A23575B71B158DE800EC8208 /* Home Remote.app */,
 				A23575CE1B158DE800EC8208 /* Home RemoteTests.xctest */,
+				A2498C8A1B1C0363001D59EA /* Home Remote Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +123,7 @@
 		A23575B91B158DE800EC8208 /* Home Remote */ = {
 			isa = PBXGroup;
 			children = (
+				A2498CA41B1C145E001D59EA /* Home Remote.entitlements */,
 				A23575BC1B158DE800EC8208 /* AppDelegate.swift */,
 				A23575BE1B158DE800EC8208 /* FirstViewController.swift */,
 				A23575C01B158DE800EC8208 /* SecondViewController.swift */,
@@ -115,6 +160,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A2498C8B1B1C0363001D59EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2498C8C1B1C0363001D59EA /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2498C8E1B1C0363001D59EA /* Home Remote Widget */ = {
+			isa = PBXGroup;
+			children = (
+				A2498CA31B1C1452001D59EA /* Home Remote Widget.entitlements */,
+				A2498C911B1C0363001D59EA /* TodayViewController.swift */,
+				A2498C931B1C0363001D59EA /* MainInterface.storyboard */,
+				A2498C8F1B1C0363001D59EA /* Supporting Files */,
+			);
+			path = "Home Remote Widget";
+			sourceTree = "<group>";
+		};
+		A2498C8F1B1C0363001D59EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2498C901B1C0363001D59EA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,10 +197,12 @@
 				A23575B31B158DE800EC8208 /* Sources */,
 				A23575B41B158DE800EC8208 /* Frameworks */,
 				A23575B51B158DE800EC8208 /* Resources */,
+				A2498CA81B1C1864001D59EA /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A2498CA71B1C1864001D59EA /* PBXTargetDependency */,
 			);
 			name = "Home Remote";
 			productName = "Home Remote";
@@ -153,6 +227,23 @@
 			productReference = A23575CE1B158DE800EC8208 /* Home RemoteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A2498C891B1C0363001D59EA /* Home Remote Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2498C9A1B1C0364001D59EA /* Build configuration list for PBXNativeTarget "Home Remote Widget" */;
+			buildPhases = (
+				A2498C861B1C0363001D59EA /* Sources */,
+				A2498C871B1C0363001D59EA /* Frameworks */,
+				A2498C881B1C0363001D59EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Home Remote Widget";
+			productName = "Home Remote Widget";
+			productReference = A2498C8A1B1C0363001D59EA /* Home Remote Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -164,10 +255,25 @@
 				TargetAttributes = {
 					A23575B61B158DE800EC8208 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 744NP28T6S;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A23575CD1B158DE800EC8208 = {
 						CreatedOnToolsVersion = 6.3.2;
 						TestTargetID = A23575B61B158DE800EC8208;
+					};
+					A2498C891B1C0363001D59EA = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 744NP28T6S;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -186,6 +292,7 @@
 			targets = (
 				A23575B61B158DE800EC8208 /* Home Remote */,
 				A23575CD1B158DE800EC8208 /* Home RemoteTests */,
+				A2498C891B1C0363001D59EA /* Home Remote Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -205,6 +312,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2498C881B1C0363001D59EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2498C941B1C0363001D59EA /* MainInterface.storyboard in Resources */,
+				A2498CA21B1C04C0001D59EA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +345,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A2498C861B1C0363001D59EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2498C921B1C0363001D59EA /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -236,6 +360,11 @@
 			isa = PBXTargetDependency;
 			target = A23575B61B158DE800EC8208 /* Home Remote */;
 			targetProxy = A23575CF1B158DE800EC8208 /* PBXContainerItemProxy */;
+		};
+		A2498CA71B1C1864001D59EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2498C891B1C0363001D59EA /* Home Remote Widget */;
+			targetProxy = A2498CA61B1C1864001D59EA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -346,10 +475,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Home Remote/Home Remote.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Home Remote/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -357,10 +490,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Home Remote/Home Remote.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Home Remote/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -398,6 +535,38 @@
 			};
 			name = Release;
 		};
+		A2498C981B1C0364001D59EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Home Remote Widget/Home Remote Widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Home Remote Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A2498C991B1C0364001D59EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Home Remote Widget/Home Remote Widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Home Remote Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -427,6 +596,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A2498C9A1B1C0364001D59EA /* Build configuration list for PBXNativeTarget "Home Remote Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2498C981B1C0364001D59EA /* Debug */,
+				A2498C991B1C0364001D59EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
