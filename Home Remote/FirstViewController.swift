@@ -115,7 +115,7 @@ class FirstViewController: UIViewController {
                 println("An error occured while sending \(code) to \(remote)")
                 println(error)
             } else {
-                println(response)
+                println("Successfully sent \(code) to \(remote)")
             }
         })
         
