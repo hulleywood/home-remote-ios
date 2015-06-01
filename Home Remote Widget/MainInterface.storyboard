@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Today View Controller-->
@@ -13,59 +14,82 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Um7-td-eIr">
-                                <rect key="frame" x="219" y="4" width="29" height="29"/>
-                                <state key="normal" image="volume-up-29">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKa-37-ePn">
+                                <rect key="frame" x="96" y="10" width="40" height="40"/>
+                                <state key="normal" image="volume-down-40">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="volumeDownPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="fTp-0G-Gba"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lG-uQ-OM2">
-                                <rect key="frame" x="149" y="4" width="29" height="29"/>
-                                <state key="normal" image="volume-down-29">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jx-rC-kbA">
+                                <rect key="frame" x="176" y="10" width="40" height="40"/>
+                                <state key="normal" image="volume-up-40">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="volumeUpPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Zlf-ZT-KZY"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQX-tW-VZE">
-                                <rect key="frame" x="86" y="4" width="29" height="29"/>
-                                <state key="normal" image="power-29">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYP-g3-3B7">
+                                <rect key="frame" x="16" y="10" width="40" height="40"/>
+                                <state key="normal" image="power-40">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="powerButtonPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="nyE-H2-p5g"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBX-gO-fwC">
-                                <rect key="frame" x="16" y="4" width="29" height="29"/>
-                                <state key="normal" image="refresh-2-24">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Remote is Offline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0z-lg-NWl">
+                                <rect key="frame" x="69" y="60" width="182" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mB7-u9-DgL">
+                                <rect key="frame" x="256" y="10" width="40" height="40"/>
+                                <state key="normal" image="mute-40">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zg-lv-0Ni">
-                                <rect key="frame" x="275" y="4" width="29" height="29"/>
-                                <state key="normal" image="mute-29">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <connections>
+                                    <action selector="mutePressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="6Xr-XA-Ghd"/>
+                                </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="g0z-lg-NWl" secondAttribute="centerX" id="2MY-jK-Kc3"/>
+                            <constraint firstItem="2jx-rC-kbA" firstAttribute="leading" secondItem="YKa-37-ePn" secondAttribute="trailing" constant="40" id="FFs-Dx-YEs"/>
+                            <constraint firstItem="EYP-g3-3B7" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="10" id="WEW-hV-xhB"/>
+                            <constraint firstItem="EYP-g3-3B7" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="cC3-Kd-wCz"/>
+                            <constraint firstItem="YKa-37-ePn" firstAttribute="leading" secondItem="EYP-g3-3B7" secondAttribute="trailing" constant="40" id="cLG-pW-WD9"/>
+                            <constraint firstItem="mB7-u9-DgL" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="10" id="hp7-V6-L6A"/>
+                            <constraint firstItem="YKa-37-ePn" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="10" id="lHM-iV-GDr"/>
+                            <constraint firstItem="g0z-lg-NWl" firstAttribute="top" secondItem="2jx-rC-kbA" secondAttribute="bottom" constant="10" id="tT4-yM-nZ4"/>
+                            <constraint firstItem="mB7-u9-DgL" firstAttribute="leading" secondItem="2jx-rC-kbA" secondAttribute="trailing" constant="40" id="xeT-95-kVq"/>
+                            <constraint firstItem="2jx-rC-kbA" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="10" id="yNL-MP-nle"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="37"/>
+                    <size key="freeformSize" width="320" height="100"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="524" y="219.5"/>
+            <point key="canvasLocation" x="516" y="285"/>
         </scene>
     </scenes>
     <resources>
-        <image name="mute-29" width="29" height="29"/>
-        <image name="power-29" width="29" height="29"/>
-        <image name="refresh-2-24" width="24" height="24"/>
-        <image name="volume-down-29" width="29" height="29"/>
-        <image name="volume-up-29" width="29" height="29"/>
+        <image name="mute-40" width="40" height="40"/>
+        <image name="power-40" width="40" height="40"/>
+        <image name="volume-down-40" width="40" height="40"/>
+        <image name="volume-up-40" width="40" height="40"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

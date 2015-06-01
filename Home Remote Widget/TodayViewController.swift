@@ -10,6 +10,15 @@ import UIKit
 import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
+    
+    struct Config {
+        let baseUrl: String
+        var roomOnline: Bool
+        var room: String
+    }
+    
+    var config = Config(baseUrl: "http://10.0.1.54:2488", roomOnline: true, room: "living_room")
+    //var config = Config(baseUrl: "http://127.0.0.1:2488", roomOnline: false, room: "living_room")
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +38,43 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // If there's an update, use NCUpdateResult.NewData
 
         completionHandler(NCUpdateResult.NewData)
+    }
+    
+    @IBAction func powerButtonPressed(sender: AnyObject) {
+        sendRemoteSignal("projector", code: "KEY_POWER")
+        sendRemoteSignal("projector", code: "KEY_POWER")
+    }
+    
+    @IBAction func volumeDownPressed(sender: AnyObject) {
+        sendRemoteSignal("logitech_stereo", code: "KEY_VOLUMEDOWN")
+    }
+    
+    @IBAction func volumeUpPressed(sender: AnyObject) {
+        sendRemoteSignal("logitech_stereo", code: "KEY_VOLUMEUP")
+    }
+    
+    @IBAction func mutePressed(sender: AnyObject) {
+        sendRemoteSignal("logitech_stereo", code: "KEY_MUTE")
+    }
+    
+    func sendRemoteSignal(remote: String, code: String) {
+        var url = NSURL(string: "\(config.baseUrl)/send/\(remote)/\(code)")
+        let session = NSURLSession.sharedSession()
+        let dataTask = session.dataTaskWithURL(url!, completionHandler: { (data: NSData!, response:NSURLResponse!,
+            error: NSError!) -> Void in
+            if error != nil {
+                println("An error occured while sending \(code) to \(remote)")
+                println(error)
+            } else {
+                println(response)
+            }
+        })
+        
+        if config.roomOnline {
+            dataTask.resume()
+        } else {
+            println("Cannot send \(code) to \(remote) because \(config.room) is offline")
+        }
     }
     
 }

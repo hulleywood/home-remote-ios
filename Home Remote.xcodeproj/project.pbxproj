@@ -14,11 +14,11 @@
 		A23575C61B158DE800EC8208 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23575C51B158DE800EC8208 /* Images.xcassets */; };
 		A23575C91B158DE800EC8208 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A23575C71B158DE800EC8208 /* LaunchScreen.xib */; };
 		A23575D51B158DE800EC8208 /* Home_RemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23575D41B158DE800EC8208 /* Home_RemoteTests.swift */; };
-		A2498C8D1B1C0363001D59EA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2498C8C1B1C0363001D59EA /* NotificationCenter.framework */; };
-		A2498C921B1C0363001D59EA /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2498C911B1C0363001D59EA /* TodayViewController.swift */; };
-		A2498C941B1C0363001D59EA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2498C931B1C0363001D59EA /* MainInterface.storyboard */; };
-		A2498CA21B1C04C0001D59EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23575C51B158DE800EC8208 /* Images.xcassets */; };
-		A2498CA51B1C1864001D59EA /* Home Remote Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A2498C8A1B1C0363001D59EA /* Home Remote Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A2F6312B1B1C212E002CC71A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2498C8C1B1C0363001D59EA /* NotificationCenter.framework */; };
+		A2F631301B1C212E002CC71A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6312F1B1C212E002CC71A /* TodayViewController.swift */; };
+		A2F631321B1C212E002CC71A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F631311B1C212E002CC71A /* MainInterface.storyboard */; };
+		A2F631351B1C212E002CC71A /* Home Remote Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A2F6312A1B1C212E002CC71A /* Home Remote Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A2F6313A1B1C2B8D002CC71A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23575C51B158DE800EC8208 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,11 +29,11 @@
 			remoteGlobalIDString = A23575B61B158DE800EC8208;
 			remoteInfo = "Home Remote";
 		};
-		A2498CA61B1C1864001D59EA /* PBXContainerItemProxy */ = {
+		A2F631331B1C212E002CC71A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A23575AF1B158DE800EC8208 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A2498C891B1C0363001D59EA;
+			remoteGlobalIDString = A2F631291B1C212E002CC71A;
 			remoteInfo = "Home Remote Widget";
 		};
 /* End PBXContainerItemProxy section */
@@ -45,7 +45,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				A2498CA51B1C1864001D59EA /* Home Remote Widget.appex in Embed App Extensions */,
+				A2F631351B1C212E002CC71A /* Home Remote Widget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,13 +64,13 @@
 		A23575CE1B158DE800EC8208 /* Home RemoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Home RemoteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A23575D31B158DE800EC8208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A23575D41B158DE800EC8208 /* Home_RemoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_RemoteTests.swift; sourceTree = "<group>"; };
-		A2498C8A1B1C0363001D59EA /* Home Remote Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Home Remote Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2498C8C1B1C0363001D59EA /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		A2498C901B1C0363001D59EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2498C911B1C0363001D59EA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		A2498C931B1C0363001D59EA /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
-		A2498CA31B1C1452001D59EA /* Home Remote Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Home Remote Widget.entitlements"; sourceTree = "<group>"; };
 		A2498CA41B1C145E001D59EA /* Home Remote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Home Remote.entitlements"; sourceTree = "<group>"; };
+		A2F6312A1B1C212E002CC71A /* Home Remote Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Home Remote Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2F6312E1B1C212E002CC71A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2F6312F1B1C212E002CC71A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		A2F631311B1C212E002CC71A /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		A2F631391B1C216D002CC71A /* Home Remote Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Home Remote Widget.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,11 +88,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A2498C871B1C0363001D59EA /* Frameworks */ = {
+		A2F631271B1C212E002CC71A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2498C8D1B1C0363001D59EA /* NotificationCenter.framework in Frameworks */,
+				A2F6312B1B1C212E002CC71A /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +104,7 @@
 			children = (
 				A23575B91B158DE800EC8208 /* Home Remote */,
 				A23575D11B158DE800EC8208 /* Home RemoteTests */,
-				A2498C8E1B1C0363001D59EA /* Home Remote Widget */,
+				A2F6312C1B1C212E002CC71A /* Home Remote Widget */,
 				A2498C8B1B1C0363001D59EA /* Frameworks */,
 				A23575B81B158DE800EC8208 /* Products */,
 			);
@@ -115,7 +115,7 @@
 			children = (
 				A23575B71B158DE800EC8208 /* Home Remote.app */,
 				A23575CE1B158DE800EC8208 /* Home RemoteTests.xctest */,
-				A2498C8A1B1C0363001D59EA /* Home Remote Widget.appex */,
+				A2F6312A1B1C212E002CC71A /* Home Remote Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,21 +168,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A2498C8E1B1C0363001D59EA /* Home Remote Widget */ = {
+		A2F6312C1B1C212E002CC71A /* Home Remote Widget */ = {
 			isa = PBXGroup;
 			children = (
-				A2498CA31B1C1452001D59EA /* Home Remote Widget.entitlements */,
-				A2498C911B1C0363001D59EA /* TodayViewController.swift */,
-				A2498C931B1C0363001D59EA /* MainInterface.storyboard */,
-				A2498C8F1B1C0363001D59EA /* Supporting Files */,
+				A2F631391B1C216D002CC71A /* Home Remote Widget.entitlements */,
+				A2F6312F1B1C212E002CC71A /* TodayViewController.swift */,
+				A2F631311B1C212E002CC71A /* MainInterface.storyboard */,
+				A2F6312D1B1C212E002CC71A /* Supporting Files */,
 			);
 			path = "Home Remote Widget";
 			sourceTree = "<group>";
 		};
-		A2498C8F1B1C0363001D59EA /* Supporting Files */ = {
+		A2F6312D1B1C212E002CC71A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A2498C901B1C0363001D59EA /* Info.plist */,
+				A2F6312E1B1C212E002CC71A /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				A2498CA71B1C1864001D59EA /* PBXTargetDependency */,
+				A2F631341B1C212E002CC71A /* PBXTargetDependency */,
 			);
 			name = "Home Remote";
 			productName = "Home Remote";
@@ -227,13 +227,13 @@
 			productReference = A23575CE1B158DE800EC8208 /* Home RemoteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A2498C891B1C0363001D59EA /* Home Remote Widget */ = {
+		A2F631291B1C212E002CC71A /* Home Remote Widget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A2498C9A1B1C0364001D59EA /* Build configuration list for PBXNativeTarget "Home Remote Widget" */;
+			buildConfigurationList = A2F631361B1C212E002CC71A /* Build configuration list for PBXNativeTarget "Home Remote Widget" */;
 			buildPhases = (
-				A2498C861B1C0363001D59EA /* Sources */,
-				A2498C871B1C0363001D59EA /* Frameworks */,
-				A2498C881B1C0363001D59EA /* Resources */,
+				A2F631261B1C212E002CC71A /* Sources */,
+				A2F631271B1C212E002CC71A /* Frameworks */,
+				A2F631281B1C212E002CC71A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -241,7 +241,7 @@
 			);
 			name = "Home Remote Widget";
 			productName = "Home Remote Widget";
-			productReference = A2498C8A1B1C0363001D59EA /* Home Remote Widget.appex */;
+			productReference = A2F6312A1B1C212E002CC71A /* Home Remote Widget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -266,7 +266,7 @@
 						CreatedOnToolsVersion = 6.3.2;
 						TestTargetID = A23575B61B158DE800EC8208;
 					};
-					A2498C891B1C0363001D59EA = {
+					A2F631291B1C212E002CC71A = {
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = 744NP28T6S;
 						SystemCapabilities = {
@@ -292,7 +292,7 @@
 			targets = (
 				A23575B61B158DE800EC8208 /* Home Remote */,
 				A23575CD1B158DE800EC8208 /* Home RemoteTests */,
-				A2498C891B1C0363001D59EA /* Home Remote Widget */,
+				A2F631291B1C212E002CC71A /* Home Remote Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -315,12 +315,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A2498C881B1C0363001D59EA /* Resources */ = {
+		A2F631281B1C212E002CC71A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2498C941B1C0363001D59EA /* MainInterface.storyboard in Resources */,
-				A2498CA21B1C04C0001D59EA /* Images.xcassets in Resources */,
+				A2F631321B1C212E002CC71A /* MainInterface.storyboard in Resources */,
+				A2F6313A1B1C2B8D002CC71A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,11 +345,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A2498C861B1C0363001D59EA /* Sources */ = {
+		A2F631261B1C212E002CC71A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2498C921B1C0363001D59EA /* TodayViewController.swift in Sources */,
+				A2F631301B1C212E002CC71A /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,10 +361,10 @@
 			target = A23575B61B158DE800EC8208 /* Home Remote */;
 			targetProxy = A23575CF1B158DE800EC8208 /* PBXContainerItemProxy */;
 		};
-		A2498CA71B1C1864001D59EA /* PBXTargetDependency */ = {
+		A2F631341B1C212E002CC71A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A2498C891B1C0363001D59EA /* Home Remote Widget */;
-			targetProxy = A2498CA61B1C1864001D59EA /* PBXContainerItemProxy */;
+			target = A2F631291B1C212E002CC71A /* Home Remote Widget */;
+			targetProxy = A2F631331B1C212E002CC71A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -535,9 +535,11 @@
 			};
 			name = Release;
 		};
-		A2498C981B1C0364001D59EA /* Debug */ = {
+		A2F631371B1C212E002CC71A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "Home Remote Widget/Home Remote Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -548,21 +550,21 @@
 				INFOPLIST_FILE = "Home Remote Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		A2498C991B1C0364001D59EA /* Release */ = {
+		A2F631381B1C212E002CC71A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "Home Remote Widget/Home Remote Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Home Remote Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -597,11 +599,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A2498C9A1B1C0364001D59EA /* Build configuration list for PBXNativeTarget "Home Remote Widget" */ = {
+		A2F631361B1C212E002CC71A /* Build configuration list for PBXNativeTarget "Home Remote Widget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A2498C981B1C0364001D59EA /* Debug */,
-				A2498C991B1C0364001D59EA /* Release */,
+				A2F631371B1C212E002CC71A /* Debug */,
+				A2F631381B1C212E002CC71A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
