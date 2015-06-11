@@ -18,8 +18,8 @@ class FirstViewController: UIViewController {
         var room: String
     }
 
+    var timer = NSTimer();
     var config = Config(baseUrl: "http://10.0.1.54:2488", roomOnline: false, room: "living_room")
-    //var config = Config(baseUrl: "http://127.0.0.1:2488", roomOnline: false, room: "living_room")
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -95,10 +95,44 @@ class FirstViewController: UIViewController {
     }
 
     @IBAction func volumeDownPressed(sender: AnyObject) {
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.3, target:self, selector: Selector("triggerVolumeDown"), userInfo: nil, repeats: true)
+    }
+    
+    @IBAction func volumeDownUpInside(sender: AnyObject) {
+        timer.invalidate()
+        triggerVolumeDown()
+    }
+    
+    @IBAction func volumeDownUpOutside(sender: AnyObject) {
+        timer.invalidate()
+    }
+    
+    @IBAction func volumeDownCancel(sender: AnyObject) {
+        timer.invalidate()
+    }
+    
+    func triggerVolumeDown() {
         sendRemoteSignal("logitech_stereo", code: "KEY_VOLUMEDOWN")
     }
     
     @IBAction func volumeUpPressed(sender: AnyObject) {
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.3, target:self, selector: Selector("triggerVolumeUp"), userInfo: nil, repeats: true)
+    }
+    
+    @IBAction func volumeUpUpInside(sender: AnyObject) {
+        timer.invalidate()
+        triggerVolumeUp()
+    }
+    
+    @IBAction func volumeUpUpOutside(sender: AnyObject) {
+        timer.invalidate()
+    }
+    
+    @IBAction func volumeUpCancel(sender: AnyObject) {
+        timer.invalidate()
+    }
+    
+    func triggerVolumeUp() {
         sendRemoteSignal("logitech_stereo", code: "KEY_VOLUMEUP")
     }
     

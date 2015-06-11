@@ -32,7 +32,10 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="volumeDownPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="N5E-Vr-9PR"/>
+                                    <action selector="volumeDownCancel:" destination="9pv-A4-QxB" eventType="touchCancel" id="meL-iK-hHz"/>
+                                    <action selector="volumeDownPressed:" destination="9pv-A4-QxB" eventType="touchDown" id="XEg-BI-1Cn"/>
+                                    <action selector="volumeDownUpInside:" destination="9pv-A4-QxB" eventType="touchUpInside" id="clU-Kf-hZm"/>
+                                    <action selector="volumeDownUpOutside:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="BHO-m2-him"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xq-Q5-4Pb">
@@ -41,7 +44,10 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="volumeUpPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="oKh-yq-qW2"/>
+                                    <action selector="volumeUpCancel:" destination="9pv-A4-QxB" eventType="touchCancel" id="WmA-HT-kRj"/>
+                                    <action selector="volumeUpPressed:" destination="9pv-A4-QxB" eventType="touchDown" id="40X-6v-RSB"/>
+                                    <action selector="volumeUpUpInside:" destination="9pv-A4-QxB" eventType="touchUpInside" id="PqJ-Uj-kv3"/>
+                                    <action selector="volumeUpUpOutside:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="m2T-e8-oCD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsZ-Yp-ibI">
