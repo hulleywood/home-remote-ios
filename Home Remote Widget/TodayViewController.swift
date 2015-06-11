@@ -22,7 +22,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.preferredContentSize = CGSizeMake(320, 60);
         // Do any additional setup after loading the view from its nib.
+    }
+    
+    func widgetMarginInsetsForProposedMarginInsets(defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(0, 40, 0, 0)
     }
     
     override func didReceiveMemoryWarning() {
@@ -76,5 +81,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             println("Cannot send \(code) to \(remote) because \(config.room) is offline")
         }
     }
+
     
 }
