@@ -17,6 +17,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         var room: String
     }
     
+    var timer = NSTimer();
     var config = Config(baseUrl: "http://10.0.1.54:2488", roomOnline: true, room: "living_room")
         
     override func viewDidLoad() {
@@ -41,11 +42,45 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         sendRemoteSignal("projector", code: "KEY_POWER")
     }
     
+    @IBAction func volumeDownUpInside(sender: AnyObject) {
+        timer.invalidate()
+        triggerVolumeDown()
+    }
+    
+    @IBAction func volumeDownUpOutside(sender: AnyObject) {
+        timer.invalidate()
+    }
+    
+    @IBAction func volumeDownCancel(sender: AnyObject) {
+        timer.invalidate()
+    }
+    
     @IBAction func volumeDownPressed(sender: AnyObject) {
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.3, target:self, selector: Selector("triggerVolumeDown"), userInfo: nil, repeats: true)
+    }
+    
+    func triggerVolumeDown() {
         sendRemoteSignal("logitech_stereo", code: "KEY_VOLUMEDOWN")
     }
     
+    @IBAction func volumeUpUpInside(sender: AnyObject) {
+        timer.invalidate()
+        triggerVolumeUp()
+    }
+    
+    @IBAction func volumeUpUpOutside(sender: AnyObject) {
+        timer.invalidate()
+    }
+    
+    @IBAction func volumeUpCancel(sender: AnyObject) {
+        timer.invalidate()
+    }
+    
     @IBAction func volumeUpPressed(sender: AnyObject) {
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.3, target:self, selector: Selector("triggerVolumeUp"), userInfo: nil, repeats: true)
+    }
+    
+    func triggerVolumeUp() {
         sendRemoteSignal("logitech_stereo", code: "KEY_VOLUMEUP")
     }
     
