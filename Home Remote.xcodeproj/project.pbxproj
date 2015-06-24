@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		A23575BD1B158DE800EC8208 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23575BC1B158DE800EC8208 /* AppDelegate.swift */; };
 		A23575BF1B158DE800EC8208 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23575BE1B158DE800EC8208 /* FirstViewController.swift */; };
-		A23575C11B158DE800EC8208 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23575C01B158DE800EC8208 /* SecondViewController.swift */; };
 		A23575C41B158DE800EC8208 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23575C21B158DE800EC8208 /* Main.storyboard */; };
 		A23575C61B158DE800EC8208 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23575C51B158DE800EC8208 /* Images.xcassets */; };
 		A23575C91B158DE800EC8208 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A23575C71B158DE800EC8208 /* LaunchScreen.xib */; };
-		A23575D51B158DE800EC8208 /* Home_RemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23575D41B158DE800EC8208 /* Home_RemoteTests.swift */; };
+		A2A51A651B37766A0098636E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A51A641B37766A0098636E /* MasterViewController.swift */; };
 		A2F6312B1B1C212E002CC71A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2498C8C1B1C0363001D59EA /* NotificationCenter.framework */; };
 		A2F631301B1C212E002CC71A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6312F1B1C212E002CC71A /* TodayViewController.swift */; };
 		A2F631321B1C212E002CC71A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F631311B1C212E002CC71A /* MainInterface.storyboard */; };
@@ -22,13 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A23575CF1B158DE800EC8208 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A23575AF1B158DE800EC8208 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A23575B61B158DE800EC8208;
-			remoteInfo = "Home Remote";
-		};
 		A2F631331B1C212E002CC71A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A23575AF1B158DE800EC8208 /* Project object */;
@@ -57,15 +49,12 @@
 		A23575BB1B158DE800EC8208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A23575BC1B158DE800EC8208 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A23575BE1B158DE800EC8208 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		A23575C01B158DE800EC8208 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		A23575C31B158DE800EC8208 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A23575C51B158DE800EC8208 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A23575C81B158DE800EC8208 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A23575CE1B158DE800EC8208 /* Home RemoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Home RemoteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A23575D31B158DE800EC8208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A23575D41B158DE800EC8208 /* Home_RemoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_RemoteTests.swift; sourceTree = "<group>"; };
 		A2498C8C1B1C0363001D59EA /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		A2498CA41B1C145E001D59EA /* Home Remote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Home Remote.entitlements"; sourceTree = "<group>"; };
+		A2A51A641B37766A0098636E /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		A2F6312A1B1C212E002CC71A /* Home Remote Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Home Remote Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F6312E1B1C212E002CC71A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2F6312F1B1C212E002CC71A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -75,13 +64,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		A23575B41B158DE800EC8208 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A23575CB1B158DE800EC8208 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -103,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				A23575B91B158DE800EC8208 /* Home Remote */,
-				A23575D11B158DE800EC8208 /* Home RemoteTests */,
 				A2F6312C1B1C212E002CC71A /* Home Remote Widget */,
 				A2498C8B1B1C0363001D59EA /* Frameworks */,
 				A23575B81B158DE800EC8208 /* Products */,
@@ -114,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				A23575B71B158DE800EC8208 /* Home Remote.app */,
-				A23575CE1B158DE800EC8208 /* Home RemoteTests.xctest */,
 				A2F6312A1B1C212E002CC71A /* Home Remote Widget.appex */,
 			);
 			name = Products;
@@ -125,10 +105,10 @@
 			children = (
 				A2498CA41B1C145E001D59EA /* Home Remote.entitlements */,
 				A23575BC1B158DE800EC8208 /* AppDelegate.swift */,
-				A23575BE1B158DE800EC8208 /* FirstViewController.swift */,
-				A23575C01B158DE800EC8208 /* SecondViewController.swift */,
-				A23575C21B158DE800EC8208 /* Main.storyboard */,
 				A23575C51B158DE800EC8208 /* Images.xcassets */,
+				A23575BE1B158DE800EC8208 /* FirstViewController.swift */,
+				A23575C21B158DE800EC8208 /* Main.storyboard */,
+				A2A51A641B37766A0098636E /* MasterViewController.swift */,
 				A23575C71B158DE800EC8208 /* LaunchScreen.xib */,
 				A23575BA1B158DE800EC8208 /* Supporting Files */,
 			);
@@ -139,23 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				A23575BB1B158DE800EC8208 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A23575D11B158DE800EC8208 /* Home RemoteTests */ = {
-			isa = PBXGroup;
-			children = (
-				A23575D41B158DE800EC8208 /* Home_RemoteTests.swift */,
-				A23575D21B158DE800EC8208 /* Supporting Files */,
-			);
-			path = "Home RemoteTests";
-			sourceTree = "<group>";
-		};
-		A23575D21B158DE800EC8208 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A23575D31B158DE800EC8208 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -209,24 +172,6 @@
 			productReference = A23575B71B158DE800EC8208 /* Home Remote.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A23575CD1B158DE800EC8208 /* Home RemoteTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A23575DB1B158DE800EC8208 /* Build configuration list for PBXNativeTarget "Home RemoteTests" */;
-			buildPhases = (
-				A23575CA1B158DE800EC8208 /* Sources */,
-				A23575CB1B158DE800EC8208 /* Frameworks */,
-				A23575CC1B158DE800EC8208 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A23575D01B158DE800EC8208 /* PBXTargetDependency */,
-			);
-			name = "Home RemoteTests";
-			productName = "Home RemoteTests";
-			productReference = A23575CE1B158DE800EC8208 /* Home RemoteTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		A2F631291B1C212E002CC71A /* Home Remote Widget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2F631361B1C212E002CC71A /* Build configuration list for PBXNativeTarget "Home Remote Widget" */;
@@ -262,10 +207,6 @@
 							};
 						};
 					};
-					A23575CD1B158DE800EC8208 = {
-						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = A23575B61B158DE800EC8208;
-					};
 					A2F631291B1C212E002CC71A = {
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = 744NP28T6S;
@@ -291,7 +232,6 @@
 			projectRoot = "";
 			targets = (
 				A23575B61B158DE800EC8208 /* Home Remote */,
-				A23575CD1B158DE800EC8208 /* Home RemoteTests */,
 				A2F631291B1C212E002CC71A /* Home Remote Widget */,
 			);
 		};
@@ -305,13 +245,6 @@
 				A23575C41B158DE800EC8208 /* Main.storyboard in Resources */,
 				A23575C91B158DE800EC8208 /* LaunchScreen.xib in Resources */,
 				A23575C61B158DE800EC8208 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A23575CC1B158DE800EC8208 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,17 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A23575C11B158DE800EC8208 /* SecondViewController.swift in Sources */,
+				A2A51A651B37766A0098636E /* MasterViewController.swift in Sources */,
 				A23575BD1B158DE800EC8208 /* AppDelegate.swift in Sources */,
 				A23575BF1B158DE800EC8208 /* FirstViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A23575CA1B158DE800EC8208 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A23575D51B158DE800EC8208 /* Home_RemoteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,11 +281,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A23575D01B158DE800EC8208 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A23575B61B158DE800EC8208 /* Home Remote */;
-			targetProxy = A23575CF1B158DE800EC8208 /* PBXContainerItemProxy */;
-		};
 		A2F631341B1C212E002CC71A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A2F631291B1C212E002CC71A /* Home Remote Widget */;
@@ -476,7 +396,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Home Remote/Home Remote.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Home Remote/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -491,47 +411,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Home Remote/Home Remote.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Home Remote/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-			};
-			name = Release;
-		};
-		A23575DC1B158DE800EC8208 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Home RemoteTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Home Remote.app/Home Remote";
-			};
-			name = Debug;
-		};
-		A23575DD1B158DE800EC8208 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Home RemoteTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Home Remote.app/Home Remote";
 			};
 			name = Release;
 		};
@@ -586,15 +472,6 @@
 			buildConfigurations = (
 				A23575D91B158DE800EC8208 /* Debug */,
 				A23575DA1B158DE800EC8208 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A23575DB1B158DE800EC8208 /* Build configuration list for PBXNativeTarget "Home RemoteTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A23575DC1B158DE800EC8208 /* Debug */,
-				A23575DD1B158DE800EC8208 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
